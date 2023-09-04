@@ -1,0 +1,7 @@
+{
+  "name": "AsistenciaQRApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
