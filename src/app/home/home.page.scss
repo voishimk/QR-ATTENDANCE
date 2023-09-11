@@ -1,27 +1,35 @@
-#container {
-  text-align: center;
 
+
+ion-content{
+  --background: url('../../assets/images/HomeBackground.png') no-repeat center/cover ;
+  background-repeat: no-repeat;
+  background-size:cover;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+zxing-scanner{
+  padding-top: 120px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+h1{
+  color: black;
+  display: flex;
+  align-items:baseline;
+  justify-content: center;
 }
 
-#container a {
-  text-decoration: none;
+h2{
+  padding-inline: 30px;
+  color: black;
+}
+
+ion-button{
+  --ion-color-primary: #3734A9;
+  padding-inline: 30px;
+  padding-top: 20px;
+}
+
+ion-card{
+  background-color: transparent;
+  height: 200px;
 }

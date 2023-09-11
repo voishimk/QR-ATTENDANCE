@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
+  //scanResult: any='';
+
   constructor() {}
+
+  //onCodeResult(result:string){
+  //  this.scanResult=result;
+  //}
 }

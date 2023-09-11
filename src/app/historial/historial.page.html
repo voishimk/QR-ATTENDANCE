@@ -1,0 +1,22 @@
+
+
+<ion-content [fullscreen]="true">
+  
+    <ion-icon name="checkmark-circle"></ion-icon>
+    <h1> Asistencia Registrada</h1>
+
+    <ion-card>
+        <h2>
+          <Strong> {{scanResult}}</Strong>
+        </h2>
+    </ion-card>
+
+    <ion-card>
+        <p>Nombre: {{datos?.firstName}} </p>
+        <p>Apellido: {{datos?.lastName}}</p>
+        <p>Hora de registro: {{registroHora}}</p>
+    </ion-card>
+  
+    <ion-button (click)="volverScanner()" size="large" fill="solid" shape="round" expand="block" >Volver</ion-button>
+
+</ion-content>

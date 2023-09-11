@@ -1,0 +1,54 @@
+ion-content{
+    --background: url('../../assets/images/HistorialBackground.png') no-repeat center/cover ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+  }
+
+  ion-card{
+    background-color: transparent;
+    height: 150px;
+    top: 10px;
+    
+  }
+  h2{
+    color: black;
+    padding-inline: 30px;
+  }
+  h1{
+    color: #3734A9;
+    font-weight: bolder;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    
+  }
+ ion-icon{
+    color: #48ff00;
+    font-size: 50px;
+    display: grid;
+    padding-left: 170px;
+    justify-content: center;
+    padding-top: 150px;
+    animation: show 0.3s;
+  }
+  p{
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-inline: 30px;
+  }
+  ion-button{
+    --ion-color-primary: #3734A9;
+    padding-inline: 30px;
+    padding-top: 15px;
+  }
+
+  @keyframes show {
+    0%  {
+        transform: scale(0);
+        }
+        100% {
+        transform: scale(1.0); 
+    }
+}

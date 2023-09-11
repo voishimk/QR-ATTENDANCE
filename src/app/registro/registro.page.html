@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+  <ion-icon (click)="volver()"  class="atrasBtn" name="chevron-back-outline"></ion-icon>
+  <ion-card class="ion-no-margin">
+    <ion-card-title>
+      
+      REGISTRATE
+    </ion-card-title>
+  </ion-card>
+
+  <form (ngSubmit)="register()">
+    <ion-label>RUT (Ej: 12.345.678-9) </ion-label>
+    <ion-item>
+      <ion-input [(ngModel)]="rut" type="text" name="rut" > </ion-input>
+    </ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-item>
+      <ion-input [(ngModel)]="firstName" type="text"  name="name"> </ion-input>
+    </ion-item>
+    <ion-label>Apellido</ion-label>
+    <ion-item>
+      <ion-input [(ngModel)]="lastName" type="text"  name="lastName"> </ion-input>
+    </ion-item>
+    <ion-label>Carrera</ion-label>
+    <ion-item>
+      <ion-input [(ngModel)]="carrera" type="text"  name="carrera"> </ion-input>
+    </ion-item>
+      <ion-label>Email</ion-label>
+    <ion-item>
+      <ion-input  type="email" [(ngModel)]="email" name="email"> </ion-input>
+    </ion-item>
+    <ion-label>Password</ion-label>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+
+    <ion-fab class="trashIcon" (click)="limpiarCampos()">
+      <ion-fab-button color="danger" type="submit">
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+      <ion-fab>
+        <ion-fab-button (click)="register()" color="tertiary" type="submit">
+          <ion-icon type="submit" name="chevron-forward-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    
+      
+
+  </form>
+</ion-content>

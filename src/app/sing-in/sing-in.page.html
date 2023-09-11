@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  
+  <ion-icon (click)="volver()" class="atrasBtn" name="chevron-back-outline"></ion-icon>
+  <ion-card class="ion-no-margin">
+    <ion-card-title>
+      INICIAR SESIÓN
+    </ion-card-title>
+  </ion-card>
+
+
+  
+    <ion-label>Email</ion-label>
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="loginEmail"></ion-input>
+    </ion-item>
+    <ion-label>Password</ion-label>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="loginPassword"></ion-input>
+    </ion-item>
+    <ion-fab>
+      <ion-fab-button (click)="login()" color="tertiary" >
+        <ion-icon type="submit" name="chevron-forward-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+</ion-content>

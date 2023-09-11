@@ -1,0 +1,95 @@
+ion-content{
+    --background: url('../../assets/images/LoginBackground.png') no-repeat center/cover ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+}
+ion-card{
+    box-shadow: none !important;
+    background-color: transparent;
+    padding-top: 100px;
+}
+
+ion-header{
+    background-color: transparent;
+    position: absolute;
+    
+}
+ion-card-header{
+    background-color: transparent;
+}
+
+ion-card-title{
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #ffffff;
+    background-color: transparent;
+    animation: show 1s;
+}
+ion-card-content{
+    
+    background-color: transparent;
+    text-align: center;
+    --ion-color-primary: #3734A9;
+    h3{
+        color: #3834a900;
+        font-size: 20px;
+    }
+}
+
+ion-label{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+ion-item{
+    --background: rgb(255, 255, 255);
+    padding-inline: 30px;
+    //padding-top: 15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+ion-input{
+    --background: #fff;
+    color: black;
+}
+
+ion-fab{
+    bottom: 150px;
+    left: 175px;
+    animation: float 2s infinite;
+}
+ion-fab-button{
+    width: 70px;
+    height: 70px;
+}
+
+.atrasBtn{
+    font-size: 50px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+@keyframes float {
+    0%, 100% {
+      transform: scale(1.0);
+    }
+    50% {
+      transform: scale(1.1); 
+  }
+}
+
+@keyframes show {
+    0%  {
+        transform: scale(0);
+        }
+        100% {
+        transform: scale(1.0); 
+    }
+}
