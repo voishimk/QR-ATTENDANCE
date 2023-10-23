@@ -1,0 +1,11 @@
+ion-content{
+    --background: url('../../assets/images/e404.png') no-repeat center/cover ;
+    position: absolute;
+}
+
+ion-button{
+    position: relative;
+    top: 700px;
+    padding-inline: 30px;
+    --ion-color-primary: #3734A9;
+}

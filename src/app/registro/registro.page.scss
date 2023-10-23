@@ -6,9 +6,12 @@ ion-content{
 }
 
 ion-card{
+  
+    //form 
     box-shadow: none !important;
     background-color: transparent;
-    padding-top: 50px;
+    padding-bottom: 50px;
+    
 }
 
 
@@ -24,8 +27,8 @@ ion-card-header{
 ion-card-title{
     font-size: 40px;
     font-weight: bolder;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    
     text-align: center;
     color: #ffffff;
     background-color: transparent;
@@ -53,18 +56,15 @@ ion-label{
 ion-item{
     --background: rgb(255, 255, 255);
     padding-inline: 30px;
-    //padding-top: 15px;
-    
-    padding-top: 15px;
     font-weight: bolder;
-    height: 50px;
+    height: 40px;
 }
 
 
 ion-input{
-    --background: #fff;
+    --background: #ffffff;
     color: black;
-    
+    margin-top: 10px;
 }
 
 ion-fab{
@@ -87,6 +87,10 @@ ion-fab-button{
     font-size: 50px;
     padding-top: 20px;
     color: #fff;
+}
+
+ion-select{
+    color: black;
 }
 
 @keyframes show {
