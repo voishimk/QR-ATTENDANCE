@@ -1,24 +1,34 @@
-
 <ion-content [fullscreen]="true">
-  
-  <zxing-scanner (scanSuccess)="onCodeResult($event)" ></zxing-scanner>
 
-  
+
+
+
+
+
+  <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+
+
+
+
+  <ion-card>
     <h1>
       <strong> Datos de la clase:</strong>
     </h1>
-  
-    <ion-card>
-      <h2>
-        <Strong> {{scanResult}}</Strong>
-        </h2>
-      
-    </ion-card>
-    
+    <h2>
+      <Strong> {{scanResult}}</Strong>
+    </h2>
 
-    <ion-button (click)="confirmarBtn()" size="large" fill="solid" shape="round" expand="block" [disabled]="!codigoQRDetectado">Confirmar</ion-button>
-    <ion-button (click)="cerrarSesion()" size="large" fill="solid" shape="round" expand="block" >Cerrar Sesión</ion-button>
-  
-  
+
+  </ion-card>
+
+  <ion-button (click)="confirmarBtn()" size="large" fill="solid" shape="round" expand="block"
+    [disabled]="!codigoQRDetectado">Confirmar</ion-button>
+  <ion-button (click)="openDatosPersonales()" size="large" fill="solid" shape="round" expand="block">
+    Perfil</ion-button>
+  <ion-button (click)="cerrarSesion()" size="large" fill="solid" shape="round" expand="block">Cerrar
+    Sesión</ion-button>
+
+
+
 
 </ion-content>

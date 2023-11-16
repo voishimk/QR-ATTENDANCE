@@ -7,15 +7,22 @@ ion-content{
   position: absolute;
 }
 
+
+
+
+
 zxing-scanner{
-  padding-top: 120px;
+  margin-top: 80px;
+  align-content: center;
 }
 
 h1{
   color: black;
   display: flex;
-  align-items:baseline;
+  align-items:center;
   justify-content: center;
+
+
 }
 
 h2{
@@ -26,10 +33,14 @@ h2{
 ion-button{
   --ion-color-primary: #3734A9;
   padding-inline: 30px;
-  padding-top: 20px;
+  padding-top: 1px;
+  position: relative;
+
+  scale: 90%;
 }
 
 ion-card{
   background-color: transparent;
-  height: 200px;
+  align-content: center;
+
 }

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DatosPersonalesPageRoutingModule } from './datos-personales-routing.module';
 
 import { DatosPersonalesPage } from './datos-personales.page';
+import { CamaraComponent } from './camara/camara.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { DatosPersonalesPage } from './datos-personales.page';
     IonicModule,
     DatosPersonalesPageRoutingModule
   ],
-  declarations: [DatosPersonalesPage]
+  declarations: [DatosPersonalesPage, CamaraComponent]
 })
 export class DatosPersonalesPageModule {}

@@ -1,0 +1,6 @@
+
+<div class="imagen-circular">
+  <img [src]="urlImagenCapturada" alt="Imagen capturada" *ngIf="urlImagenCapturada">
+</div>
+
+<ion-button (click)="tomarFoto()" color="tertiary" size="large" fill="solid" shape="round" expand="block">Abrir Camara</ion-button>

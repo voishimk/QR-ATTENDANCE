@@ -18,15 +18,12 @@ export class StorageService {
   }
 
   public async set(key: string, value: any) {
-    let result = await this._storage?.set(key,value);
+    let result = await this.storage?.set(key,value);
     console.log(value);
     return result;
   }
-  public async get(key: string){
-    let value = await this._storage?.get(key);
-    console.log(value);
-    return value;
-  }
+
+
   public async remove(key: string){
     let value = await this._storage?.remove(key);
     console.log(value);
@@ -34,11 +31,26 @@ export class StorageService {
   }
   public async clear(){
     let value = await this._storage?.clear();
-    
+
   }
   public async keys(key: string){
     let value = await this._storage?.keys();
-    
+
     return value;
+  }
+
+  public async guardarCuenta(cuenta: any) {
+    const cuentas = (await this._storage?.get('cuentas')) || [];
+    cuentas.push(cuenta);
+    return await this._storage?.set('cuentas', cuentas);
+  }
+
+  public async obtenerCuentas(): Promise<any[]> {
+    const cuentas = await this.storage?.get('cuentas');
+    return cuentas || [];
+  }
+  public async obtenerCuentaLogueada(): Promise<any[]> {
+    const cuentas = await this.storage?.get('usuarioLogueado');
+    return cuentas || [];
   }
 }

@@ -12,6 +12,7 @@ import { StorageService } from '../services/storage.service';
 
 })
 export class RegistroPage implements OnInit {
+  //datos persona
   public email: string='';
   public password: string='';
   public firstName: string='';
@@ -60,8 +61,7 @@ export class RegistroPage implements OnInit {
   cambiarRegion(){
     console.log("Cambiar Region Metodo");
     this.getComuna();
-    console.log(this.region);
-    console.log(this.comuna);
+    
     
   }
   
@@ -88,26 +88,29 @@ export class RegistroPage implements OnInit {
   async register() {
     if (this.email && this.password && this.firstName && this.lastName && this.rut && this.carrera && this.regionSeleccionada && this.comunaSeleccionada) {
       if (this.validarCampos()) {
-        await this.storageService.set('email', this.email );
-        await this.storageService.set('password', this.password);
-        await this.storageService.set('firstName', this.firstName);
-        await this.storageService.set('lastName', this.lastName);
-        await this.storageService.set('rut', this.rut);
-        await this.storageService.set('carrera', this.carrera);
-        await this.storageService.set('region', this.region);
-        await this.storageService.set('comuna', this.comuna);
+        //registrar datos persona
+        const cuenta= {
+          email : this.email,
+          password : this.password,
+          firstName : this.firstName,
+          lastName : this.lastName,
+          rut : this.rut,
+          carrera : this.carrera,
+          region : this.arrayRegion.find(region => region.id === this.regionSeleccionada),
+          comuna : this.comunaSeleccionada
+          };
+          //guardo la cuenta
+          await this.storageService.guardarCuenta(cuenta);
+
+        }
+        
         this.showAlert("Registro exitoso","Registro")
         this.router.navigateByUrl('/login')
       }
     }
-    else{
-      this.showAlert("Debe completar todos los campos","Error")
-    }
-    console.log(this.email);
-    console.log(this.password);
-      
+          
+  
     
-    }
 
   
   private validarCampos(): boolean {

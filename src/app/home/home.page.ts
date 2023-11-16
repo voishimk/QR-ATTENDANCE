@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  
+
 })
 export class HomePage {
 
@@ -13,7 +14,7 @@ export class HomePage {
   codigoQRDetectado: boolean = false;
   registroHora: string='';
 
-  constructor(private router:Router) {}
+  constructor(private router:Router, private storageService:StorageService) {}
 
   onCodeResult(result:string){
     this.scanResult=result;
@@ -35,6 +36,15 @@ export class HomePage {
   }
 
   cerrarSesion(){
+
+    this.storageService.remove('usuarioLogueado');
     this.router.navigateByUrl('/login');
   }
+
+  //open datos-personales page:
+  openDatosPersonales() {
+    this.router.navigateByUrl('/datos-personales');
+
+
+    }
 }

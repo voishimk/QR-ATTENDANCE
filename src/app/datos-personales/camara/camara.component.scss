@@ -1,0 +1,13 @@
+.imagen-circular {
+  width: 150px; /* ajusta el ancho y el alto a tus necesidades */
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%; /* hace que el contenedor sea un círculo */
+  margin: 0 auto; /* centra el círculo */
+}
+
+.imagen-circular img {
+  width: 100%; /* la imagen llena el contenedor */
+  height: auto;
+  display: block; /* para eliminar el espacio adicional */
+}

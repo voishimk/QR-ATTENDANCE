@@ -13,7 +13,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login', 
+    path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -33,14 +33,15 @@ const routes: Routes = [
     loadChildren: () => import('./e404/e404.module').then( m => m.E404PageModule)
   },
   {
+    path: 'datos-personales',
+    loadChildren: () => import('./datos-personales/datos-personales.module').then( m => m.DatosPersonalesPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'e404',
     pathMatch: 'full'
-  },
-  {
-    path: 'datos-personales',
-    loadChildren: () => import('./datos-personales/datos-personales.module').then( m => m.DatosPersonalesPageModule)
   }
+
 ];
 
 @NgModule({

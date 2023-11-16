@@ -1,0 +1,36 @@
+ion-content{
+  --background: url('../../assets/images/DatosPersonalesBackground.png') no-repeat center/cover ;
+  background-repeat: no-repeat;
+    background-size:cover;
+    position: absolute;
+}
+
+ion-card{
+
+  //form
+  box-shadow: none !important;
+  background-color: transparent;
+  top: 100px;
+
+}
+
+ion-title{
+  color: #3734A9;
+  font-weight: bolder;
+  font-size: 26px;
+  //center:
+  text-align: center;
+}
+
+ion-textarea{
+  --background: #3734A9;
+  --color: #ffffff;
+  height: 5px;
+}
+ion-item{
+  --background: #3734A9;
+  padding-inline: 10px;
+  margin-block: 10px;
+  --border-radius: 10px;
+
+}

@@ -1,13 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>datos-personales</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">datos-personales</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-card>
+    <ion-button (click)="openHome()" color="tertiary">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>
+      Datos Personales
+    </ion-title>
+
+      <app-camara></app-camara>
+
+    <ion-item>
+
+      <ion-textarea [readonly]="true" label="Latitud" placeholder="{{ latitud }}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Longitud" placeholder="{{ longitud }}"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Rut" placeholder="{{ usuarioLogueado.rut}}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Nombre" placeholder="{{ usuarioLogueado.firstName}}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Apellido" placeholder="{{ usuarioLogueado.lastName}}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Email" placeholder="{{ usuarioLogueado.email }}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Carrera" placeholder="{{ usuarioLogueado.carrera }}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Region" placeholder="{{ usuarioLogueado.region.nombre }}"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [readonly]="true" label="Comuna" placeholder="{{ usuarioLogueado.comuna }}"></ion-textarea>
+    </ion-item>
+  </ion-card>
+
+
+
 </ion-content>
